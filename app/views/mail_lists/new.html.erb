@@ -1,0 +1,20 @@
+<h1>Add new entry</h1>
+
+<%= form_for @user, url: mailListAdd_path, html: {method: :post} do |f| %>
+	<%= f.label :firstname %>
+	<%= f.text_field :firstname %>
+
+	<%= f.label :lastname %>
+	<%= f.text_field :lastname %>
+
+	<%= f.label :email %>
+	<%= f.email_field :email %>
+
+	<%= f.label :phone %>
+	<%= f.text_field :phone %>
+
+	<%= f.label :notes %>
+	<%= f.text_area :notes %>
+
+	<%= f.submit "Submit" %>
+<% end %>
